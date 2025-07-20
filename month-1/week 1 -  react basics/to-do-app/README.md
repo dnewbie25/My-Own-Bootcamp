@@ -8,11 +8,18 @@ This project is a simple CRUD To-Do application built using React. The app is de
 
 1. **Display Tasks**: Each task is displayed on the screen.
 2. **Styling**: The application is styled using CSS for a clean and modern look.
+3. **Add Task**: The application has a button to add a task
+4. **Edit/Delete button**: Each item is displayed with an edit and delete button (pending funcionality)
 
 ## Progress
 
-- **Week 1**: Project setup and styled the application.
-- **Upcoming**: Plan to add task adding, deletion and editing features.
+- Project setup and styled the application.
+- The submit button addds a task to the list
+- Each task has edit/delete buttons
+
+**Upcoming**:
+
+- Pending deletion and editing features.
 
 ## Semantic Versioning
 
@@ -27,6 +34,11 @@ This project follows [Semantic Versioning](https://semver.org/) guidelines:
 ## Changelog
 
 All notable changes to this project will be documented in this section.
+
+### [0.2.0] - 2025-07-20
+
+- Added the functionality of pressing the Submit button to add a task to the list
+- Added the edit and delete button to each element
 
 ### [0.1.0] - 2025-07-19
 

@@ -182,6 +182,21 @@ button[type="submit"]:hover {
   margin-top: 1rem;
   border-radius: 4px;
   padding: 0.5rem;
+  & p {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    & span {
+      & img {
+        margin-left: 1rem;
+      }
+    }
+  }
+}
+
+img {
+  color: var(--color-text);
+  width: 1rem;
 }
 
 @media (min-width: 700px) {
