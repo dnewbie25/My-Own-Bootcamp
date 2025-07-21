@@ -4,6 +4,12 @@
 
 This project is a simple CRUD To-Do application built using React. The app is designed to help users manage their tasks efficiently. It features a modern interface styled with CSS and Tailwind. The application is incremental, meaning it will be continuously improved over time to incorporate new features and enhance functionality.
 
+## How To Use
+
+You an enter a new task in the input field below `Enter the task` and click on `Add Task`. You can then delete the tasks by clicking the trash bin icon or edit the task by clicking the pencil.
+
+Once you have finished editing, you need to click the pencil icon again to exit the editing mode.
+
 ## Current Features
 
 1. **Display Tasks**: Each task is displayed on the screen.
@@ -16,10 +22,7 @@ This project is a simple CRUD To-Do application built using React. The app is de
 - Project setup and styled the application.
 - The submit button addds a task to the list
 - Each task has edit/delete buttons
-
-**Upcoming**:
-
-- Pending deletion and editing features.
+- All button work as expected now
 
 ## Semantic Versioning
 
@@ -34,6 +37,10 @@ This project follows [Semantic Versioning](https://semver.org/) guidelines:
 ## Changelog
 
 All notable changes to this project will be documented in this section.
+
+## [0.4.0] - 2025-07-21
+
+- The edit and delete button were added and work properly
 
 ## [0.3.0] - 2025-07-20
 

@@ -15,7 +15,11 @@ function App() {
     formData.preventDefault();
     setTasks((prevTasks) => [
       ...prevTasks,
-      { task: formData.target[0].value, id: crypto.randomUUID() },
+      {
+        task: formData.target[0].value,
+        id: crypto.randomUUID(),
+        editable: false,
+      },
     ]);
   }
 
@@ -28,8 +32,20 @@ function App() {
     setTasks((prev) => prev.filter((item) => item.id !== itemToDelete));
   }
 
+  /**
+   * Updates the task with the new value from the content editable element.
+   * Retrieves the current text content from the editable ref and calls the
+   * edit function passed in props with the updated task value.
+   * @param {object} itemToEdit The task object with an id and task property.
+   */
   function editItem(itemToEdit) {
-    console.log("edit", itemToEdit);
+    setTasks((prevTasks) =>
+      prevTasks.map((task) =>
+        task.id === itemToEdit.id
+          ? { ...task, task: itemToEdit.task, editable: !itemToEdit.editable }
+          : task
+      )
+    );
   }
   return (
     <main>
@@ -45,8 +61,10 @@ function App() {
             <Task
               task={task.task}
               key={task.id}
+              id={task.id}
+              editable={task.editable}
               delete={() => deleteItem(task.id)}
-              edit={() => editItem(task.id)}
+              edit={editItem}
             />
           );
         })}
