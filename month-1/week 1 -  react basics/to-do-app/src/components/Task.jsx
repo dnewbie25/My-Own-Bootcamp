@@ -7,8 +7,18 @@ export function Task(props) {
       <p>
         {props.task || " "}
         <span>
-          <img src={pencilIcon} alt="edit button" />
-          <img src={deleteIcon} alt="delete button" />
+          <input
+            type="image"
+            src={pencilIcon}
+            alt="edit button"
+            onClick={props.edit}
+          />
+          <input
+            type="image"
+            src={deleteIcon}
+            alt="delete button"
+            onClick={props.delete}
+          />
         </span>
       </p>
     </div>

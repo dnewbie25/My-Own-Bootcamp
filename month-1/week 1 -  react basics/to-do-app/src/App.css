@@ -162,7 +162,23 @@ h1 {
     background-color: var(--color-elements);
     padding: 0.5rem;
     color: var(--color-text);
+    font-size: 1.5rem;
   }
+}
+
+input[type="image"] {
+  width: 1.5rem;
+  margin-left: 1rem;
+}
+
+input[type="image"]:hover {
+  background-color: var(--color-text);
+  border-radius: 3px;
+}
+
+input[type="image"]:active {
+  background-color: var(--color-background);
+  border-radius: 3px;
 }
 
 button[type="submit"] {
@@ -182,6 +198,7 @@ button[type="submit"]:hover {
   margin-top: 1rem;
   border-radius: 4px;
   padding: 0.5rem;
+  font-size: 1.5rem;
   & p {
     display: flex;
     justify-content: space-around;

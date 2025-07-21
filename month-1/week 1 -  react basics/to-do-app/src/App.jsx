@@ -13,7 +13,23 @@ function App() {
    */
   function handleInput(formData) {
     formData.preventDefault();
-    setTasks((prevTasks) => [...prevTasks, formData.target[0].value]);
+    setTasks((prevTasks) => [
+      ...prevTasks,
+      { task: formData.target[0].value, id: crypto.randomUUID() },
+    ]);
+  }
+
+  /**
+   * Deletes an item from the tasks array based on the id of the item. The
+   * itemToDelete argument is the id of the item to be deleted.
+   * @param {string} itemToDelete The id of the item to be deleted.
+   */
+  function deleteItem(itemToDelete) {
+    setTasks((prev) => prev.filter((item) => item.id !== itemToDelete));
+  }
+
+  function editItem(itemToEdit) {
+    console.log("edit", itemToEdit);
   }
   return (
     <main>
@@ -24,9 +40,16 @@ function App() {
         for each item with the task as a prop. The key prop is set to a
         unique identifier using crypto.randomUUID(). This ensures that
         React can keep track of the components and their associated state. */}
-        {tasks.map((task) => (
-          <Task task={task} key={crypto.randomUUID()} />
-        ))}
+        {tasks.map((task) => {
+          return (
+            <Task
+              task={task.task}
+              key={task.id}
+              delete={() => deleteItem(task.id)}
+              edit={() => editItem(task.id)}
+            />
+          );
+        })}
       </section>
     </main>
   );

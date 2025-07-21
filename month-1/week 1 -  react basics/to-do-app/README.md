@@ -35,6 +35,11 @@ This project follows [Semantic Versioning](https://semver.org/) guidelines:
 
 All notable changes to this project will be documented in this section.
 
+## [0.3.0] - 2025-07-20
+
+- Added the delete funtionality
+- Changed the `useState` to have an array of objects to better handle the unique key
+
 ### [0.2.0] - 2025-07-20
 
 - Added the functionality of pressing the Submit button to add a task to the list
