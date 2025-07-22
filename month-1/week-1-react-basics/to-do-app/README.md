@@ -10,6 +10,15 @@ You can enter a new task in the input field below `Enter the task` and click on 
 
 Once you have finished editing, you need to click the pencil icon again to exit editing mode.
 
+## Demo
+
+https://daniel-react-to-do-app.netlify.app/
+
+## Live Preview
+
+<img width="2110" height="1194" alt="image" src="https://github.com/user-attachments/assets/5128e525-b84b-43a2-b97c-8eecc67fa32e" />
+
+
 ## Current Features
 
 1. **Display Tasks**: Each task is displayed on the screen.
