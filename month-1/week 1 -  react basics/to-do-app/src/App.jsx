@@ -1,10 +1,20 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 import { Input } from "./components/Input";
 import { Task } from "./components/Task";
 
 function App() {
-  const [tasks, setTasks] = useState([]);
+  // the useState, if there is a localstorage, it sets the state to it, otherwise it creates an empty array
+  const [tasks, setTasks] = useState(() => {
+    const savedTasks = localStorage.getItem("tasks");
+    return savedTasks ? JSON.parse(savedTasks) : [];
+  });
+
+  // the useEffect modifies the localStorage after it detects a change in tasks
+  useEffect(() => {
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+  }, [tasks]);
+
   /**
    * Handles the submission of the input form. Prevents the default form behavior
    * and adds the new task to the state.
