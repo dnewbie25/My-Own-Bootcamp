@@ -8,15 +8,8 @@ import NotFoundPage from "./routes/NotFoundPage.jsx";
 import "./index.css";
 import App from "./App.jsx";
 
-const router = createBrowserRouter([
-  { path: "/", element: <Home /> },
-  { path: "/notes", element: <Notes /> },
-  { path: "/user", element: <User /> },
-  { path: "*", element: <NotFoundPage /> },
-]);
-
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <App />
   </StrictMode>
 );
